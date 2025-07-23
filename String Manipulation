@@ -1,0 +1,22 @@
+input=[aa,ab,ab,bcd,aa];
+output=3 which is aa,bcd,aa; lenght of the stack
+
+input=[tom,jerry,tom,jerry];
+output=[0];
+
+
+Class Solutions{
+static int removeConsecutiveSame(String[] arr) {
+
+Stack<String> sem=new Stack<>();
+for(String nums:arr){
+if(!sem.isEmpty()&&sem.peek().equals(nums){
+sem.pop();
+}
+else{
+sem.push(nums);
+}
+}
+return sem.size();
+}
+}
